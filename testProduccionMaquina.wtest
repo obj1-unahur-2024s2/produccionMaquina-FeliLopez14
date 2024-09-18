@@ -1,9 +1,16 @@
 import maquina.*
 
-describe "group of tests ..." {
+describe "group of tests de la maquina" {
 
-  test "test 1 ..." {
-    assert.that(true)
+  test "La maquina produjo alguna vez una unidad" {
+    assert.that(maquina.algunDiaSeProdujo(5))
   }
 
+    test "Es 65 el valor mas alto de produccion" {
+    assert.equals(65,maquina.maximoValorDeProduccion())
+  }
+
+  test "producciones superiores a un valor dado"{
+    assert.equals([43,49,62,39], maquina.produccionesSuperioresA(35))
+  }
 }
